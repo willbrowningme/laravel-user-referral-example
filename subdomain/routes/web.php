@@ -19,6 +19,11 @@ Route::get('/cookie', function () {
     return Cookie::get('referral');
 });
 
+Route::get('/test', function () {
+	$email = 'tttwb@hotmail.com';
+    return \Hashids::encode($email);;
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
